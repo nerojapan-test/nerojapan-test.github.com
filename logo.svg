@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(69, 58, 220);" cx="259.311" cy="279.303" rx="200.525" ry="200.525"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(44, 91, 201);" cx="103.612" cy="123.685" rx="84.404" ry="84.404"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(44, 91, 201);" cx="403.033" cy="117.248" rx="84.404" ry="84.404"/>
+  <text style="fill: rgb(255, 255, 254); font-family: Arial, sans-serif; font-size: 113px; white-space: pre;" x="100.549" y="317.718">P W A</text>
+  <text style="fill: rgb(247, 251, 240); font-family: Arial, sans-serif; font-size: 52px; white-space: pre;" x="204.064" y="420.224"> Test</text>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255);" cx="115.818" cy="133.828" rx="39.087" ry="39.087"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255);" cx="388.845" cy="129.737" rx="39.087" ry="39.087"/>
+</svg>
