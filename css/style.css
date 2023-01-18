@@ -6,9 +6,9 @@
 body
 {
     /* 文字色を白に */
-    color: white;
+    color: black;
     /* 背景色を黒に */
-    background-color: black;
+/*    background-color: black;*/
 }
 
 /* id="clock_frame" のdiv要素 */
