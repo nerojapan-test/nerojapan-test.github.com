@@ -43,7 +43,7 @@
     <!-- スタイルシート(CSS)読み込み -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- JavaScript読み込み -->
-    <script src="./clock.js"></script>
+<!--     <script src="./clock.js"></script> -->
 
 <style type="text/css">
 
@@ -68,13 +68,15 @@ font-weight: bold; /*装飾*/ }
 #text3{
   display:inline-block;
   text-align:center;
-  width:160px;
-  height:100px;
  color: red;  display: block;
   cursor: pointer;
-  border: 5px solid #232323;
+/*  border: 5px solid #232323; */
   float:left;
   margin-right: 5px;
+font-family:"Comic Sans MS";
+font-size: 6rem; /* レスポンシブサイズ */
+
+
 }
 
 #qqqq{
@@ -102,6 +104,8 @@ font-variant-numeric:tabular-nums;/* 等幅.効果なし */
 style="text-align:right"
 float: left;
 margin-bottom: 1rem;
+  cursor: pointer;
+
 }
 
 #ssss{
@@ -130,8 +134,8 @@ p {
 
   </head>
   <body>
-    <h1>TestApp</h1>
-    <img src="logo.svg">
+<!--     <h1>TestApp</h1>         -->
+<!--     <img src="logo.svg">     -->
 
     <!-- 時計枠 -->
 <!--     <div id="clock_frame">         -->
@@ -140,7 +144,6 @@ p {
         <!-- 時刻部分 -->
 <!--    <span id="clock_time"></span>   -->
 <!--</div>-->
-    <div id="text-button"><p id="text">Answer</p></div>
     
 
     <!-- 計算式 -->
@@ -173,7 +176,7 @@ p {
 
     <p></p>
     <!-- ボタン -->
-    <div id="text2">Answer</div>
+<!--     <div id="text2">Answer</div> -->
     <div id="text3">Next</div>
 
 
@@ -183,12 +186,12 @@ var num3=0
 var arrayTest = new Array(10);
 init();
 
+//
+//document.getElementById("text-button").onclick = function() {
+//  document.getElementById("text").innerHTML = "クリックされた！";
+//};
 
-document.getElementById("text-button").onclick = function() {
-  document.getElementById("text").innerHTML = "クリックされた！";
-};
-
-document.getElementById("text2").onclick = function() {
+document.getElementById("text3").onclick = function() {
   //document.getElementById("text2").innerHTML = "クリックされた！";
   //var str =get_test();
   //console.log(str);
@@ -197,9 +200,9 @@ document.getElementById("text2").onclick = function() {
 //  update();
   init();
 };
-document.getElementById("text3").onclick = function() {
-  document.getElementById("text3").innerHTML = "クリックされた！";
-};
+//document.getElementById("text3").onclick = function() {
+//  document.getElementById("text3").innerHTML = "クリックされた！";
+//};
 
 
 document.getElementById("a").onclick = function() {
