@@ -75,6 +75,8 @@ font-weight: bold; /*装飾*/ }
   margin-right: 5px;
 font-family:"Comic Sans MS";
 font-size: 6rem; /* レスポンシブサイズ */
+/*background-color: #c4e6ee;
+border-radius: 40px 40px 40px 40px;*/
 
 
 }
@@ -105,6 +107,8 @@ style="text-align:right"
 float: left;
 margin-bottom: 1rem;
   cursor: pointer;
+background-color: #e8f8f8;
+border-radius: 40px 40px 40px 40px;
 
 }
 
@@ -148,6 +152,7 @@ p {
 
     <!-- 計算式 -->
     <div id="qqqq">
+        <div>&nbsp;</div>
         <div id="aaaa">5x + 2x = x</div>
         <div id="bbbb">bbbb</div>
         <div id="cccc">cccc</div>
@@ -158,9 +163,11 @@ p {
         <div id="hhhh">hhhh</div>
         <div id="iiii">iiii</div>
         <div id="jjjj">jjjj</div>
+        <div>&nbsp;</div>
     </div>
     <p></p>
     <div id="rrrr">
+        <div>&nbsp;</div>
         <div id="a">x = ?</div>
         <div id="b">x = ?</div>
         <div id="c">x = ?</div>
@@ -171,13 +178,14 @@ p {
         <div id="h">x = ?</div>
         <div id="i">x = ?</div>
         <div id="j">x = ?</div>
+        <div>&nbsp;</div>
     </div>
 
 
     <p></p>
     <!-- ボタン -->
 <!--     <div id="text2">Answer</div> -->
-    <div id="text3">Next</div>
+    <div id="text3">&nbsp;Next&nbsp; </div>
 
 
 <script>
@@ -298,9 +306,9 @@ function get_test(index)
 //    var str = `${num1}x + ${num2}x = ${num4}`;
     var str;
     if (num1>=0) {
-        str = "&nbsp;" + `${num1}x + ${num2}x = ${num4}`+"&nbsp;&nbsp;&nbsp;";
+        str = "&nbsp;&nbsp;" + `${num1}x + ${num2}x = ${num4}`+"&nbsp;&nbsp;&nbsp;";
     } else {
-        str = `${num1}x + ${num2}x = ${num4}`+"&nbsp;&nbsp;&nbsp;";
+        str = "&nbsp;" + `${num1}x + ${num2}x = ${num4}`+"&nbsp;&nbsp;&nbsp;";
 
     }
     arrayTest[index]=num3;
