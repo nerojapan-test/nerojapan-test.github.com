@@ -100,7 +100,7 @@ font-size: 6rem; /* レスポンシブサイズ */
  color: gray;  
 line-height:1;
 margin:0;
-font-family:"Verdana";
+font-family:"Hiragino Kaku Gothic ProN";
 font-style: italic;
 font-variant-numeric:tabular-nums;/* 等幅.効果なし */
 style="text-align:right"
