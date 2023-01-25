@@ -73,7 +73,7 @@ font-weight: bold; /*装飾*/ }
 /*  border: 5px solid #232323; */
   float:left;
   margin-right: 5px;
-font-family:"Comic Sans MS";
+font-family:"メイリオ";
 font-size: 6rem; /* レスポンシブサイズ */
 /*background-color: #c4e6ee;
 border-radius: 40px 40px 40px 40px;*/
@@ -87,7 +87,7 @@ font-size: 6rem; /* レスポンシブサイズ */
  color: gray;  
 line-height:1;
 margin:0;
-font-family:"Comic Sans MS";
+font-family:"メイリオ";
 font-style: italic;
 font-variant-numeric:tabular-nums;/* 等幅.効果なし */
 float: left;
@@ -100,7 +100,7 @@ font-size: 6rem; /* レスポンシブサイズ */
  color: gray;  
 line-height:1;
 margin:0;
-font-family:"Comic Sans MS";
+font-family:"メイリオ";
 font-style: italic;
 font-variant-numeric:tabular-nums;/* 等幅.効果なし */
 style="text-align:right"
@@ -118,7 +118,7 @@ font-size: 6rem; /* レスポンシブサイズ */
  color: gray;  
 line-height:1;
 margin:0;
-font-family:"Comic Sans MS";
+font-family:"Helvetica Neue";
 font-style: italic;
 font-variant-numeric:tabular-nums;/* 等幅.効果なし */
 style="text-align:right"
@@ -149,7 +149,8 @@ p {
 <!--    <span id="clock_time"></span>   -->
 <!--</div>-->
     
-
+    <div>&nbsp;</div>
+    <p></p>
     <!-- 計算式 -->
     <div id="qqqq">
         <div>&nbsp;</div>
@@ -306,9 +307,9 @@ function get_test(index)
 //    var str = `${num1}x + ${num2}x = ${num4}`;
     var str;
     if (num1>=0) {
-        str = "&nbsp;" + `${num1}x + ${num2}x = ${num4}`+"&nbsp;&nbsp;&nbsp;";
+        str = "&nbsp;&nbsp;" + `${num1}x + ${num2}x = ${num4}`+"&nbsp;&nbsp;&nbsp;";
     } else {
-        str = `${num1}x + ${num2}x = ${num4}`+"&nbsp;&nbsp;&nbsp;";
+        str = "&nbsp;" + `${num1}x + ${num2}x = ${num4}`+"&nbsp;&nbsp;&nbsp;";
 
     }
     arrayTest[index]=num3;
