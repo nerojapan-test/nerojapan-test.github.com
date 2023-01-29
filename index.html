@@ -44,93 +44,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- JavaScript読み込み -->
 <!--     <script src="./clock.js"></script> -->
+    <script src="./calc.js"></script>
 
 <style type="text/css">
-
-#text { color: red;  display: block;
-  cursor: pointer;
-font-size: 1.5rem;
-font-weight: bold; /*装飾*/ }
-
-
-#text2{
-  display:inline-block;
-  text-align:center;
-  width:160px;
-  height:100px;
- color: red;  display: block;
-  cursor: pointer;
-  border: 5px solid #232323;
-  float:left;
-  margin-right: 50px;
-}
-
-#text3{
-  display:inline-block;
-  text-align:center;
- color: red;  display: block;
-  cursor: pointer;
-/*  border: 5px solid #232323; */
-  float:left;
-  margin-right: 5px;
-font-family:"Comic Sans MS";
-font-size: 6rem; /* レスポンシブサイズ */
-/*background-color: #c4e6ee;
-border-radius: 40px 40px 40px 40px;*/
-
-
-}
-
-#qqqq{
-  text-align:left;
-font-size: 6rem; /* レスポンシブサイズ */
- color: gray;  
-line-height:1;
-margin:0;
-font-family:"Comic Sans MS";
-font-style: italic;
-font-variant-numeric:tabular-nums;/* 等幅.効果なし */
-float: left;
-margin-bottom: 1rem;
-}
-
-#rrrr{
-  text-align:left;
-font-size: 6rem; /* レスポンシブサイズ */
- color: gray;  
-line-height:1;
-margin:0;
-font-family:"Comic Sans MS";
-font-style: italic;
-font-variant-numeric:tabular-nums;/* 等幅.効果なし */
-style="text-align:right"
-float: left;
-margin-bottom: 1rem;
-  cursor: pointer;
-background-color: #e8f8f8;
-border-radius: 40px 40px 40px 40px;
-
-}
-
-#ssss{
-  text-align:left;
-font-size: 6rem; /* レスポンシブサイズ */
- color: gray;  
-line-height:1;
-margin:0;
-font-family:"Comic Sans MS";
-font-style: italic;
-font-variant-numeric:tabular-nums;/* 等幅.効果なし */
-style="text-align:right"
-clear: both;
-margin-bottom: 1rem;
-
-
-}
-
-p {
-  margin-bottom: 100px;
-}
 
 </style>
 
@@ -152,181 +68,50 @@ p {
     <div>&nbsp;</div>
     <p></p>
     <!-- 計算式 -->
-    <div id="qqqq">
+    <div id="formula">
         <div>&nbsp;</div>
-        <div id="aaaa">5x + 2x = x</div>
-        <div id="bbbb">bbbb</div>
-        <div id="cccc">cccc</div>
-        <div id="dddd">dddd</div>
-        <div id="eeee">eeee</div>
-        <div id="ffff">ffff</div>
-        <div id="gggg">gggg</div>
-        <div id="hhhh">hhhh</div>
-        <div id="iiii">iiii</div>
-        <div id="jjjj">jjjj</div>
+        <div id="fm_no0"></div>
+        <div id="fm_no1"></div>
+        <div id="fm_no2"></div>
+        <div id="fm_no3"></div>
+        <div id="fm_no4"></div>
+        <div id="fm_no5"></div>
+        <div id="fm_no6"></div>
+        <div id="fm_no7"></div>
+        <div id="fm_no8"></div>
+        <div id="fm_no9"></div>
         <div>&nbsp;</div>
     </div>
     <p></p>
-    <div id="rrrr">
+
+    <!-- x = ? -->
+    <div id="answer">
         <div>&nbsp;</div>
-        <div id="a">x = ?</div>
-        <div id="b">x = ?</div>
-        <div id="c">x = ?</div>
-        <div id="d">x = ?</div>
-        <div id="e">x = ?</div>
-        <div id="f">x = ?</div>
-        <div id="g">x = ?</div>
-        <div id="h">x = ?</div>
-        <div id="i">x = ?</div>
-        <div id="j">x = ?</div>
+        <div id="ans_no0" onclick="onClickAns(0)">x = ?</div>
+        <div id="ans_no1" onclick="onClickAns(1)">x = ?</div>
+        <div id="ans_no2" onclick="onClickAns(2)">x = ?</div>
+        <div id="ans_no3" onclick="onClickAns(3)">x = ?</div>
+        <div id="ans_no4" onclick="onClickAns(4)">x = ?</div>
+        <div id="ans_no5" onclick="onClickAns(5)">x = ?</div>
+        <div id="ans_no6" onclick="onClickAns(6)">x = ?</div>
+        <div id="ans_no7" onclick="onClickAns(7)">x = ?</div>
+        <div id="ans_no8" onclick="onClickAns(8)">x = ?</div>
+        <div id="ans_no9" onclick="onClickAns(9)">x = ?</div>
         <div>&nbsp;</div>
     </div>
 
 
     <p></p>
     <!-- ボタン -->
-<!--     <div id="text2">Answer</div> -->
-    <div id="text3">&nbsp;Next&nbsp; </div>
+    <div id="next" onclick="onClickNext()">&nbsp;Next&nbsp; </div>
 
 
 <script>
 
-var num3=0
-var arrayTest = new Array(10);
-init();
-
 //
-//document.getElementById("text-button").onclick = function() {
-//  document.getElementById("text").innerHTML = "クリックされた！";
-//};
-
-document.getElementById("text3").onclick = function() {
-  //document.getElementById("text2").innerHTML = "クリックされた！";
-  //var str =get_test();
-  //console.log(str);
-  //alert(str);
-  //alert(num3);
-//  update();
-  init();
-};
-//document.getElementById("text3").onclick = function() {
-//  document.getElementById("text3").innerHTML = "クリックされた！";
-//};
-
-
-document.getElementById("a").onclick = function() {
-  document.getElementById("a").innerHTML = get_ans(0);
-};
-document.getElementById("b").onclick = function() {
-  document.getElementById("b").innerHTML = get_ans(1);
-};
-document.getElementById("c").onclick = function() {
-  document.getElementById("c").innerHTML = get_ans(2);
-};
-document.getElementById("d").onclick = function() {
-  document.getElementById("d").innerHTML = get_ans(3);
-};
-document.getElementById("e").onclick = function() {
-  document.getElementById("e").innerHTML = get_ans(4);
-};
-document.getElementById("f").onclick = function() {
-  document.getElementById("f").innerHTML = get_ans(5);
-};
-document.getElementById("g").onclick = function() {
-  document.getElementById("g").innerHTML = get_ans(6);
-};
-document.getElementById("h").onclick = function() {
-  document.getElementById("h").innerHTML = get_ans(7);
-};
-document.getElementById("i").onclick = function() {
-  document.getElementById("i").innerHTML = get_ans(8);
-};
-document.getElementById("j").onclick = function() {
-  document.getElementById("j").innerHTML = get_ans(9);
-};
-
-
-
-
-function update() 
-{
-    // あとでテーブル化
-//    var str = get_test();
-    document.getElementById("aaaa").innerHTML = get_test(0);
-    document.getElementById("bbbb").innerHTML = get_test(1);
-    document.getElementById("cccc").innerHTML = get_test(2);
-    document.getElementById("dddd").innerHTML = get_test(3);
-    document.getElementById("eeee").innerHTML = get_test(4);
-    document.getElementById("ffff").innerHTML = get_test(5);
-    document.getElementById("gggg").innerHTML = get_test(6);
-    document.getElementById("hhhh").innerHTML = get_test(7);
-    document.getElementById("iiii").innerHTML = get_test(8);
-    document.getElementById("jjjj").innerHTML = get_test(9);
-
+window.onload = function(){
+init();
 }
-
-function init()
-{
-  update();
-  var str = "x = ?"
-  document.getElementById("a").innerHTML = str;
-  document.getElementById("b").innerHTML = str;
-  document.getElementById("c").innerHTML = str;
-  document.getElementById("d").innerHTML = str;
-  document.getElementById("e").innerHTML = str;
-  document.getElementById("f").innerHTML = str;
-  document.getElementById("g").innerHTML = str;
-  document.getElementById("h").innerHTML = str;
-  document.getElementById("i").innerHTML = str;
-  document.getElementById("j").innerHTML = str;
-}
-
-
-function get_test(index) 
-{
-    var num1=0
-    var num2=0
-//	global num3
-
-    var min = Math.ceil(-9);
-    var max = Math.floor(9);
-  
-    while (num1==0) {
-        num1= Math.floor(Math.random() * (max - min) + min);
-    }
-
-    min = 1;
-
-    while (num2==0 || Math.abs(num2)==Math.abs(num1)) {
-        num2= Math.floor(Math.random() * (max - min) + min);
-    }
-    num3 = Math.floor(Math.random() * (max - min) + min);
-    num4 = num1*num3 + num2*num3
-
-    //str = "${num1}x + ${num2}x = ${num3}" .format(num1,num2,num4)
-//    var str = `${num1}x + ${num2}x = ${num4}`;
-    var str;
-    if (num1>=0) {
-        str = "&nbsp;&nbsp;" + `${num1}x + ${num2}x = ${num4}`+"&nbsp;&nbsp;&nbsp;";
-    } else {
-        str = "&nbsp;" + `${num1}x + ${num2}x = ${num4}`+"&nbsp;&nbsp;&nbsp;";
-
-    }
-    arrayTest[index]=num3;
-
-    return str
-}
-
-
-
-// num3をテーブル化して、引数によって切り替える
-// 問題つくるときに、テーブルに設定する
-
-function get_ans(num){
-        var str = `x = ${ arrayTest[num]}`;
-	return str
-}
-
 
 
 

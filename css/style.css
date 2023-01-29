@@ -11,40 +11,61 @@ body
 /*    background-color: black;*/
 }
 
-/* id="clock_frame" のdiv要素 */
-div#clock_frame
-{
-    /* 横幅を親要素であるbodyの100%(同じ幅)にする */
-    width: 100%;
+
+/* idのスタイルは#を頭につける。classは. */
+/* 同じスタイルを複数個所に使いまわすときはclassのほうがいい */
+
+
+
+
+#next{
+  display:inline-block;
+  text-align:center;
+  color: red;  display: block;
+  cursor: pointer;
+/*  border: 5px solid #232323; */
+  float:left;
+  margin-right: 5px;
+  font-family:"Comic Sans MS";
+  font-size: 6rem; /* レスポンシブサイズ */
+/*background-color: #c4e6ee;
+border-radius: 40px 40px 40px 40px;*/
 }
 
-/* span要素のデフォルト */
-span
-{
-    /* 本来はインライン要素であるspanをブロック要素として扱う */
-    display: block;
-    /* ここでは親要素であるdivの内部で右に寄せて配置させる */
-    float: right;
-    /* 横幅を親要素であるdivの85%にする */
-    width: 85%;
-    /* フォントの種類を一番上で指定したGoogle Webフォントに設定する */
-    font-family: 'Oleo Script Swash Caps', cursive;
+#formula{
+  text-align:left;
+  font-size: 6rem; /* レスポンシブサイズ */
+  color: gray;  
+  line-height:1;
+  margin:0;
+  font-family:"Comic Sans MS";
+  font-style: italic;
+  font-variant-numeric:tabular-nums;/* 等幅.効果なし */
+  float: left;
+  margin-bottom: 1rem;
 }
 
-/* id="clock_date" のspan要素 */
-span#clock_date
-{
-    /* この要素の中におけるテキストを右詰めにする デフォルト値のtext-align:leftを上書き */
-    text-align: right;
-    /* フォントの大きさを親要素であるdivで設定されたサイズ(px)の0.5倍にする */
-    font-size: 0.5em;
-    /* 右のパディングの幅を親要素であるdivで設定されたフォントサイズ(px)の0.5倍にする */
-    padding-right: 0.5em;
+#answer{
+  text-align:left;
+  font-size: 6rem; /* レスポンシブサイズ */
+  color: gray;  
+  line-height:1;
+  margin:0;
+  font-family:"Comic Sans MS";
+  font-style: italic;
+  font-variant-numeric:tabular-nums;/* 等幅.効果なし */
+  style="text-align:right"/* なんでか順番変えるとダメ */
+  float: left;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  background-color: #e8f8f8;
+  border-radius: 40px 40px 40px 40px;
 }
 
-/* id="clock_time" のspan要素 */
-span#clock_time
-{
-    /* フォントの大きさを親要素であるdivで設定されたサイズ(px)の2倍にする */
-    font-size: 2em;
+
+p {
+  margin-bottom: 100px;
 }
+
+
+
