@@ -54,6 +54,7 @@
 
   </head>
   <body>
+ <script src="js/count.js"></script>
 <!--     <h1>TestApp</h1>         -->
 <!--     <img src="logo.svg">     -->
 
@@ -87,16 +88,16 @@
     <!-- x = ? -->
     <div id="answer">
         <div>&nbsp;</div>
-        <div id="a" onclick="onClickAns(0)">x = ?</div>
-        <div id="b" onclick="onClickAns(1)">x = ?</div>
-        <div id="c" onclick="onClickAns(2)">x = ?</div>
-        <div id="d" onclick="onClickAns(3)">x = ?</div>
-        <div id="e" onclick="onClickAns(4)">x = ?</div>
-        <div id="f" onclick="onClickAns(5)">x = ?</div>
-        <div id="g" onclick="onClickAns(6)">x = ?</div>
-        <div id="h" onclick="onClickAns(7)">x = ?</div>
-        <div id="i" onclick="onClickAns(8)">x = ?</div>
-        <div id="j" onclick="onClickAns(9)">x = ?</div>
+        <div id="ans_no0" onclick="onClickAns(0)">x = ?</div>
+        <div id="ans_no1" onclick="onClickAns(1)">x = ?</div>
+        <div id="ans_no2" onclick="onClickAns(2)">x = ?</div>
+        <div id="ans_no3" onclick="onClickAns(3)">x = ?</div>
+        <div id="ans_no4" onclick="onClickAns(4)">x = ?</div>
+        <div id="ans_no5" onclick="onClickAns(5)">x = ?</div>
+        <div id="ans_no6" onclick="onClickAns(6)">x = ?</div>
+        <div id="ans_no7" onclick="onClickAns(7)">x = ?</div>
+        <div id="ans_no8" onclick="onClickAns(8)">x = ?</div>
+        <div id="ans_no9" onclick="onClickAns(9)">x = ?</div>
         <div>&nbsp;</div>
     </div>
 
@@ -104,8 +105,15 @@
     <p></p>
     <!-- ボタン -->
     <div id="next" onclick="onClickNext()">&nbsp;Next&nbsp; </div>
-
-
+    <p></p>
+    <div class="wrapper">
+        <div id="countDisplay" class="count-display">0</div>
+        <div class="btns">
+            <button id="countDown" class="btn">up</button>
+            <button id="countUp" class="btn">down</button>
+        </div>
+        <button id="countReset"  class="reset">reset</button>
+    </div>
 <script>
 
 //
@@ -113,6 +121,13 @@ window.onload = function(){
 init();
 }
 
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('js/serviceworker.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    }    
 
 
 </script>

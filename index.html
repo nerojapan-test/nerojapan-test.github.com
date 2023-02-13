@@ -54,6 +54,7 @@
 
   </head>
   <body>
+ <script src="js/count.js"></script>
 <!--     <h1>TestApp</h1>         -->
 <!--     <img src="logo.svg">     -->
 
@@ -104,8 +105,15 @@
     <p></p>
     <!-- ボタン -->
     <div id="next" onclick="onClickNext()">&nbsp;Next&nbsp; </div>
-
-
+    <p></p>
+    <div class="wrapper">
+        <div id="countDisplay" class="count-display">0</div>
+        <div class="btns">
+            <button id="countDown" class="btn">up</button>
+            <button id="countUp" class="btn">down</button>
+        </div>
+        <button id="countReset"  class="reset">reset</button>
+    </div>
 <script>
 
 //
@@ -113,6 +121,13 @@ window.onload = function(){
 init();
 }
 
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('js/serviceworker.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    }    
 
 
 </script>

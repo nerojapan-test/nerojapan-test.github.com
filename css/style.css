@@ -56,7 +56,6 @@ border-radius: 40px 40px 40px 40px;*/
   font-variant-numeric:tabular-nums;/* 等幅.効果なし */
   style="text-align:right"/* なんでか順番変えるとダメ */
   float: left;
-  margin-bottom: 1rem;
   cursor: pointer;
   background-color: #e8f8f8;
   border-radius: 40px 40px 40px 40px;
